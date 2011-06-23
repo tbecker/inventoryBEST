@@ -1,0 +1,29 @@
+<h1>Listing product_master_facts</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Name</th>
+    <th>Reference</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @product_master_facts.each do |product_master_fact| %>
+  <tr>
+    <td><%= product_master_fact.company %></td>
+    <td><%= product_master_fact.name %></td>
+    <td><%= product_master_fact.reference %></td>
+    <td><%= product_master_fact.price %></td>
+    <td><%= link_to 'Show', product_master_fact %></td>
+    <td><%= link_to 'Edit', edit_product_master_fact_path(product_master_fact) %></td>
+    <td><%= link_to 'Destroy', product_master_fact, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Product master fact', new_product_master_fact_path %>

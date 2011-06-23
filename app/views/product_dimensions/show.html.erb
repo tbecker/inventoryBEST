@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @product_dimension.company %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @product_dimension.name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @product_dimension.type %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @product_dimension.source %>
+</p>
+
+<p>
+  <b>Product line:</b>
+  <%= @product_dimension.product_line %>
+</p>
+
+<p>
+  <b>Classification:</b>
+  <%= @product_dimension.classification %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_dimension_path(@product_dimension) %> |
+<%= link_to 'Back', product_dimensions_path %>

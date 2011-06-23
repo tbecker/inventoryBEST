@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Company dimension:</b>
+  <%= @inventory_transaction_fact.company_dimension %>
+</p>
+
+<p>
+  <b>Date dimenension:</b>
+  <%= @inventory_transaction_fact.date_dimenension %>
+</p>
+
+<p>
+  <b>Product dimension:</b>
+  <%= @inventory_transaction_fact.product_dimension %>
+</p>
+
+<p>
+  <b>Warehouse dimension:</b>
+  <%= @inventory_transaction_fact.warehouse_dimension %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @inventory_transaction_fact.amount %>
+</p>
+
+<p>
+  <b>Unit of measure:</b>
+  <%= @inventory_transaction_fact.unit_of_measure %>
+</p>
+
+
+<%= link_to 'Edit', edit_inventory_transaction_fact_path(@inventory_transaction_fact) %> |
+<%= link_to 'Back', inventory_transaction_facts_path %>

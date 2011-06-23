@@ -1,0 +1,33 @@
+<h1>Listing inventory_transaction_facts</h1>
+
+<table>
+  <tr>
+    <th>Company dimension</th>
+    <th>Date dimenension</th>
+    <th>Product dimension</th>
+    <th>Warehouse dimension</th>
+    <th>Amount</th>
+    <th>Unit of measure</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @inventory_transaction_facts.each do |inventory_transaction_fact| %>
+  <tr>
+    <td><%= inventory_transaction_fact.company_dimension %></td>
+    <td><%= inventory_transaction_fact.date_dimenension %></td>
+    <td><%= inventory_transaction_fact.product_dimension %></td>
+    <td><%= inventory_transaction_fact.warehouse_dimension %></td>
+    <td><%= inventory_transaction_fact.amount %></td>
+    <td><%= inventory_transaction_fact.unit_of_measure %></td>
+    <td><%= link_to 'Show', inventory_transaction_fact %></td>
+    <td><%= link_to 'Edit', edit_inventory_transaction_fact_path(inventory_transaction_fact) %></td>
+    <td><%= link_to 'Destroy', inventory_transaction_fact, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Inventory transaction fact', new_inventory_transaction_fact_path %>

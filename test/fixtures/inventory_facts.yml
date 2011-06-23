@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  company_dimension: 
+  date_dimenension: 
+  product_dimension: 
+  warehouse_dimension: 
+  amount: 
+  unit_of_measure: MyString
+
+two:
+  company_dimension: 
+  date_dimenension: 
+  product_dimension: 
+  warehouse_dimension: 
+  amount: 
+  unit_of_measure: MyString

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Company dimension:</b>
+  <%= @warehouse_dimension.company_dimension %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @warehouse_dimension.name %>
+</p>
+
+<p>
+  <b>Reference:</b>
+  <%= @warehouse_dimension.reference %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @warehouse_dimension.type %>
+</p>
+
+
+<%= link_to 'Edit', edit_warehouse_dimension_path(@warehouse_dimension) %> |
+<%= link_to 'Back', warehouse_dimensions_path %>

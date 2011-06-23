@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  industry: MyString
+  segment: MyString
+
+two:
+  name: MyString
+  industry: MyString
+  segment: MyString

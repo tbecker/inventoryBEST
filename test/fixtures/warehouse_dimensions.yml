@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  company_dimension: 
+  name: MyString
+  reference: MyString
+  type: MyString
+
+two:
+  company_dimension: 
+  name: MyString
+  reference: MyString
+  type: MyString

@@ -1,0 +1,33 @@
+<%= form_for(@warehouse_dimension) do |f| %>
+  <% if @warehouse_dimension.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@warehouse_dimension.errors.count, "error") %> prohibited this warehouse_dimension from being saved:</h2>
+
+      <ul>
+      <% @warehouse_dimension.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company_dimension %><br />
+    <%= f.text_field :company_dimension %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :reference %><br />
+    <%= f.text_field :reference %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

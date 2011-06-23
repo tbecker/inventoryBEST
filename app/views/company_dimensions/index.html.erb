@@ -1,0 +1,27 @@
+<h1>Listing company_dimensions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Industry</th>
+    <th>Segment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @company_dimensions.each do |company_dimension| %>
+  <tr>
+    <td><%= company_dimension.name %></td>
+    <td><%= company_dimension.industry %></td>
+    <td><%= company_dimension.segment %></td>
+    <td><%= link_to 'Show', company_dimension %></td>
+    <td><%= link_to 'Edit', edit_company_dimension_path(company_dimension) %></td>
+    <td><%= link_to 'Destroy', company_dimension, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Company dimension', new_company_dimension_path %>

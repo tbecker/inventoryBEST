@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Full date:</b>
+  <%= @date_dimension.full_date %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @date_dimension.day %>
+</p>
+
+<p>
+  <b>Month:</b>
+  <%= @date_dimension.month %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @date_dimension.year %>
+</p>
+
+<p>
+  <b>Week:</b>
+  <%= @date_dimension.week %>
+</p>
+
+<p>
+  <b>Quarter:</b>
+  <%= @date_dimension.quarter %>
+</p>
+
+<p>
+  <b>Weekday:</b>
+  <%= @date_dimension.weekday %>
+</p>
+
+<p>
+  <b>Week label:</b>
+  <%= @date_dimension.week_label %>
+</p>
+
+<p>
+  <b>Month label:</b>
+  <%= @date_dimension.month_label %>
+</p>
+
+<p>
+  <b>Weekday label:</b>
+  <%= @date_dimension.weekday_label %>
+</p>
+
+
+<%= link_to 'Edit', edit_date_dimension_path(@date_dimension) %> |
+<%= link_to 'Back', date_dimensions_path %>

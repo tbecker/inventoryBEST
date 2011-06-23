@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  full_date: 2011-06-23 12:55:16
+  day: 1
+  month: 1
+  year: 1
+  week: 1
+  quarter: 1
+  weekday: 1
+  week_label: MyString
+  month_label: MyString
+  weekday_label: MyString
+
+two:
+  full_date: 2011-06-23 12:55:16
+  day: 1
+  month: 1
+  year: 1
+  week: 1
+  quarter: 1
+  weekday: 1
+  week_label: MyString
+  month_label: MyString
+  weekday_label: MyString

@@ -1,0 +1,2 @@
+module TargetFactsHelper
+end

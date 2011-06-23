@@ -1,4 +1,20 @@
 InventoryBEST::Application.routes.draw do
+  resources :target_facts
+
+  resources :inventory_transaction_facts
+
+  resources :inventory_facts
+
+  resources :date_dimensions
+
+  resources :warehouse_dimensions
+
+  resources :product_master_facts
+
+  resources :product_dimensions
+
+  resources :company_dimensions
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,41 @@
+<%= form_for(@inventory_fact) do |f| %>
+  <% if @inventory_fact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@inventory_fact.errors.count, "error") %> prohibited this inventory_fact from being saved:</h2>
+
+      <ul>
+      <% @inventory_fact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company_dimension %><br />
+    <%= f.text_field :company_dimension %>
+  </div>
+  <div class="field">
+    <%= f.label :date_dimenension %><br />
+    <%= f.text_field :date_dimenension %>
+  </div>
+  <div class="field">
+    <%= f.label :product_dimension %><br />
+    <%= f.text_field :product_dimension %>
+  </div>
+  <div class="field">
+    <%= f.label :warehouse_dimension %><br />
+    <%= f.text_field :warehouse_dimension %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_of_measure %><br />
+    <%= f.text_field :unit_of_measure %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

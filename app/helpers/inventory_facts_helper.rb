@@ -1,0 +1,2 @@
+module InventoryFactsHelper
+end

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @product_master_fact.company %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @product_master_fact.name %>
+</p>
+
+<p>
+  <b>Reference:</b>
+  <%= @product_master_fact.reference %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @product_master_fact.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_master_fact_path(@product_master_fact) %> |
+<%= link_to 'Back', product_master_facts_path %>

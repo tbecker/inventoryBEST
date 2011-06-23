@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @company_dimension.name %>
+</p>
+
+<p>
+  <b>Industry:</b>
+  <%= @company_dimension.industry %>
+</p>
+
+<p>
+  <b>Segment:</b>
+  <%= @company_dimension.segment %>
+</p>
+
+
+<%= link_to 'Edit', edit_company_dimension_path(@company_dimension) %> |
+<%= link_to 'Back', company_dimensions_path %>

@@ -1,0 +1,41 @@
+<h1>Listing date_dimensions</h1>
+
+<table>
+  <tr>
+    <th>Full date</th>
+    <th>Day</th>
+    <th>Month</th>
+    <th>Year</th>
+    <th>Week</th>
+    <th>Quarter</th>
+    <th>Weekday</th>
+    <th>Week label</th>
+    <th>Month label</th>
+    <th>Weekday label</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @date_dimensions.each do |date_dimension| %>
+  <tr>
+    <td><%= date_dimension.full_date %></td>
+    <td><%= date_dimension.day %></td>
+    <td><%= date_dimension.month %></td>
+    <td><%= date_dimension.year %></td>
+    <td><%= date_dimension.week %></td>
+    <td><%= date_dimension.quarter %></td>
+    <td><%= date_dimension.weekday %></td>
+    <td><%= date_dimension.week_label %></td>
+    <td><%= date_dimension.month_label %></td>
+    <td><%= date_dimension.weekday_label %></td>
+    <td><%= link_to 'Show', date_dimension %></td>
+    <td><%= link_to 'Edit', edit_date_dimension_path(date_dimension) %></td>
+    <td><%= link_to 'Destroy', date_dimension, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Date dimension', new_date_dimension_path %>

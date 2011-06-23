@@ -1,0 +1,57 @@
+<%= form_for(@date_dimension) do |f| %>
+  <% if @date_dimension.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@date_dimension.errors.count, "error") %> prohibited this date_dimension from being saved:</h2>
+
+      <ul>
+      <% @date_dimension.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :full_date %><br />
+    <%= f.datetime_select :full_date %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br />
+    <%= f.text_field :day %>
+  </div>
+  <div class="field">
+    <%= f.label :month %><br />
+    <%= f.text_field :month %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br />
+    <%= f.text_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :week %><br />
+    <%= f.text_field :week %>
+  </div>
+  <div class="field">
+    <%= f.label :quarter %><br />
+    <%= f.text_field :quarter %>
+  </div>
+  <div class="field">
+    <%= f.label :weekday %><br />
+    <%= f.text_field :weekday %>
+  </div>
+  <div class="field">
+    <%= f.label :week_label %><br />
+    <%= f.text_field :week_label %>
+  </div>
+  <div class="field">
+    <%= f.label :month_label %><br />
+    <%= f.text_field :month_label %>
+  </div>
+  <div class="field">
+    <%= f.label :weekday_label %><br />
+    <%= f.text_field :weekday_label %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

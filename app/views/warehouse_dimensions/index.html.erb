@@ -1,0 +1,29 @@
+<h1>Listing warehouse_dimensions</h1>
+
+<table>
+  <tr>
+    <th>Company dimension</th>
+    <th>Name</th>
+    <th>Reference</th>
+    <th>Type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @warehouse_dimensions.each do |warehouse_dimension| %>
+  <tr>
+    <td><%= warehouse_dimension.company_dimension %></td>
+    <td><%= warehouse_dimension.name %></td>
+    <td><%= warehouse_dimension.reference %></td>
+    <td><%= warehouse_dimension.type %></td>
+    <td><%= link_to 'Show', warehouse_dimension %></td>
+    <td><%= link_to 'Edit', edit_warehouse_dimension_path(warehouse_dimension) %></td>
+    <td><%= link_to 'Destroy', warehouse_dimension, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Warehouse dimension', new_warehouse_dimension_path %>

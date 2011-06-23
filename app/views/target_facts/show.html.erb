@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Company dimension:</b>
+  <%= @target_fact.company_dimension %>
+</p>
+
+<p>
+  <b>Date dimenension:</b>
+  <%= @target_fact.date_dimenension %>
+</p>
+
+<p>
+  <b>Product type:</b>
+  <%= @target_fact.product_type %>
+</p>
+
+<p>
+  <b>Target amount:</b>
+  <%= @target_fact.target_amount %>
+</p>
+
+<p>
+  <b>Unit of measure:</b>
+  <%= @target_fact.unit_of_measure %>
+</p>
+
+
+<%= link_to 'Edit', edit_target_fact_path(@target_fact) %> |
+<%= link_to 'Back', target_facts_path %>
