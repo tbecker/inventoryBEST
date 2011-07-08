@@ -5,7 +5,8 @@ class CreateInventoryTransactionFacts < ActiveRecord::Migration
       t.references :date_dimenension
       t.references :product_dimension
       t.references :warehouse_dimension
-      t.decimal :amount
+      t.decimal :quantity,:precision => 10, :scale => 2
+      t.decimal :value, :precision => 10, :scale => 2
       t.string :unit_of_measure
 
       t.timestamps

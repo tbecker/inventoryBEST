@@ -11,8 +11,6 @@ Conventions used.
 
 Each database holds a unique id field
 The name of the database tables is pluralized
-Dimension files are ending with _dimensions
-Fact files are ending with _facts
 
 Facts:
   Fact classes and tables follow the typical Rails rules: classes are singular
@@ -38,7 +36,16 @@ Dimension View:
 
 == Getting Started
 
+== ETL
 
+In the directory ETL, there are the ETL files. 
+
+The dimensions need to be filled in this sequences
+
+1. Date
+2. Company
+3. Product
+4. Warehouse
 
 
 

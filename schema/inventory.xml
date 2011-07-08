@@ -1,0 +1,70 @@
+<Schema name="99invenoryBEST">
+  <Dimension type="StandardDimension" highCardinality="false" name="Company" description="Company">
+    <Hierarchy name="Companies" hasAll="true">
+      <Table name="company_dimensions">
+      </Table>
+      <Level name="Company" table="company_dimensions" column="id" nameColumn="name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" description="company">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="TimeDimension" highCardinality="false" name="Date">
+    <Hierarchy name="YearQuarterMonthDate" hasAll="false" description="Yeat">
+      <Table name="date_dimensions">
+      </Table>
+      <Level name="Year" table="date_dimensions" column="year" type="String" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never" description="Year">
+      </Level>
+      <Level name="Quarter" table="date_dimensions" column="quarter" type="String" uniqueMembers="false" levelType="TimeQuarters" hideMemberIf="Never" description="Quarter">
+      </Level>
+      <Level name="Month" table="date_dimensions" column="month" nameColumn="month_label" type="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never" description="Month">
+      </Level>
+      <Level name="Day" table="date_dimensions" column="day" type="String" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never" description="Day">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="YearWeek" hasAll="false" description="Month">
+      <Table name="date_dimensions">
+      </Table>
+      <Level name="Year" table="date_dimensions" column="year" type="String" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never" description="Year">
+      </Level>
+      <Level name="Week" table="date_dimensions" column="week" type="String" uniqueMembers="false" levelType="TimeWeeks" hideMemberIf="Never" description="Week">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Product">
+    <Hierarchy name="Product" hasAll="true">
+      <Table name="product_dimensions">
+      </Table>
+      <Level name="Type" table="product_dimensions" column="type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Source" table="product_dimensions" column="source" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="product" table="product_dimensions" column="reference" nameColumn="name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="ProductMaster">
+    <Hierarchy name="ProductMaster" hasAll="true">
+      <Table name="product_master_facts">
+      </Table>
+      <Level name="Product" table="product_master_facts" column="product_dimension_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Property name="price" column="price" type="Numeric">
+        </Property>
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="inventoryBEST99" cache="true" enabled="true">
+    <Table name="inventory_facts">
+    </Table>
+    <DimensionUsage source="Date" name="Date" foreignKey="date_dimenension_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Company" name="Company" foreignKey="company_dimension_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" foreignKey="product_dimension_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="ProductMaster" name="ProductMaster" foreignKey="product_dimension_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="amount" column="amount" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="inventory_value" description="Value" formula="([Measures].[amount]*[ProductMaster].CurrentMember.Properties(&#34;value&#34;))" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+</Schema>

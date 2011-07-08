@@ -8,8 +8,7 @@ class CreateProductDimensions < ActiveRecord::Migration
       t.string :source
       t.string :product_line
       t.string :classification
-
-      t.timestamps
+      t.decimal :price, :precision => 10, :scale => 2
     end
   end
 

@@ -11,8 +11,6 @@ class CreateDateDimensions < ActiveRecord::Migration
       t.string :week_label
       t.string :month_label
       t.string :weekday_label
-
-      t.timestamps
     end
   end
 

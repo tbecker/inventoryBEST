@@ -5,8 +5,6 @@ class CreateCompanyDimensions < ActiveRecord::Migration
       t.string :reference
       t.string :industry
       t.string :segment
-
-      t.timestamps
     end
   end
 

@@ -5,8 +5,6 @@ class CreateWarehouseDimensions < ActiveRecord::Migration
       t.string :name
       t.string :reference
       t.string :type
-
-      t.timestamps
     end
   end
 

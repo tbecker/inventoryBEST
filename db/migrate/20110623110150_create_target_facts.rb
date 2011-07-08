@@ -4,7 +4,7 @@ class CreateTargetFacts < ActiveRecord::Migration
       t.references :company_dimension
       t.references :date_dimenension
       t.string :product_type
-      t.decimal :target_amount
+      t.decimal :target_quantity, :precision => 10, :scale => 2
       t.string :unit_of_measure
 
       t.timestamps
